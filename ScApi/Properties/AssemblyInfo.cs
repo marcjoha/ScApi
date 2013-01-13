@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 
 [assembly: AssemblyTitle("ScApi")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("ScApi is a .NET wrapper around the Socialcast developer API.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ScApi")]
