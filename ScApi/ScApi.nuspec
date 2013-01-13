@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+    <metadata>
+        <id>ScApi</id>
+        <version>1.0.0</version>
+        <authors>Marcus Johansson</authors>
+        <description>ScApi is a .NET wrapper around the Socialcast developer API.</description>
+        <language>en-US</language>
+        <projectUrl>http://github.com/marcjoha/ScApi</projectUrl>
+        <tags>Socialcast API wrapper REST</tags>
+        <dependencies>
+            <dependency id="RestSharp" version="104.1" />
+        </dependencies>
+    </metadata>
+</package>
