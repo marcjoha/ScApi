@@ -80,6 +80,12 @@ namespace ScApi
             return Execute<List<Message>>(request);
         }
 
+        /// <summary>
+        ///     Executes an arbitrary request.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="request"></param>
+        /// <returns></returns>
         private T Execute<T>(RestRequest request) where T : new()
         {
             var client = new RestClient();
