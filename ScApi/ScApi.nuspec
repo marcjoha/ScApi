@@ -2,7 +2,8 @@
 <package>
     <metadata>
         <id>ScApi</id>
-        <version>1.0.0</version>
+        <!-- Major.Minor.Patch -->
+        <version>1.1.0</version>
         <authors>Marcus Johansson</authors>
         <description>ScApi is a .NET wrapper around the Socialcast developer API.</description>
         <language>en-US</language>
