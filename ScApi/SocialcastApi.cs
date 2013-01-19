@@ -55,7 +55,7 @@ namespace ScApi
         public List<Community> GetCommunities()
         {
             var client = new RestClient(_communityUrl);
-            var request = new RestRequest("api/authentication", Method.POST) {RootElement = "communities"};
+            var request = new RestRequest("api/authentication.json", Method.POST) {RootElement = "communities"};
             request.AddParameter("email", _email);
             request.AddParameter("password", ToInsecureString(_password));
 
@@ -70,14 +70,25 @@ namespace ScApi
         }
 
         /// <summary>
-        ///     A "stream" is a list of messages that a user is subscribed to, e.g. the home stream or the company stream.
+        ///     Gets all messages in a particular stream a user subscribes to.
         /// </summary>
-        /// <param name="resource"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
-        public List<Message> GetStream(string resource)
+        public List<Message> GetStream(int id)
         {
-            var request = new RestRequest(resource) {RootElement = "messages"};
+            var request = new RestRequest("api/streams/{id}/messages.json") {RootElement = "messages"};
+            request.AddUrlSegment("id", id.ToString());
             return Execute<List<Message>>(request);
+        }
+
+        /// <summary>
+        ///     Gets a list of all streams a user is subscribed to.
+        /// </summary>
+        /// <returns></returns>
+        public List<Stream> GetStreams()
+        {
+            var request = new RestRequest("api/streams.json") {RootElement = "streams"};
+            return Execute<List<Stream>>(request);
         }
 
         /// <summary>

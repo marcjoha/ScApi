@@ -61,6 +61,7 @@
     <Compile Include="Data\Poll.cs" />
     <Compile Include="Data\Recipient.cs" />
     <Compile Include="Data\Source.cs" />
+    <Compile Include="Data\Stream.cs" />
     <Compile Include="Data\Tag.cs" />
     <Compile Include="Data\Thumbnails.cs" />
     <Compile Include="Data\User.cs" />
