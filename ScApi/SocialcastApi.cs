@@ -42,6 +42,16 @@ namespace ScApi
 
         #endregion
 
+        #region Settings
+
+        public void SetIgnoreSslErrors()
+        {
+            ServicePointManager.ServerCertificateValidationCallback +=
+                (sender, certificate, chain, sslPolicyErrors) => true;
+        }
+
+        #endregion
+
         #region Public methods
 
         /// <summary>
