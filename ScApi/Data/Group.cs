@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace ScApi.Data
 {
     public class Group
@@ -10,5 +12,9 @@ namespace ScApi.Data
         public string Username { get; set; }
         public string Groupname { get; set; }
         public bool Private { get; set; }
+        public List<int> AdminIds { get; set; }
+        public string Active { get; set; }
+        public string Permission { get; set; }
+        public string GroupType { get; set; }
     }
 }
