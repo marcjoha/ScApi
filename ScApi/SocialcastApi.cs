@@ -118,7 +118,7 @@ namespace ScApi
         /// </summary>
         /// <param name="input">A string that needs to be stored securely</param>
         /// <returns>A SecureString</returns>
-        public static SecureString ToSecureString(string input)
+        private static SecureString ToSecureString(string input)
         {
             var secure = new SecureString();
             foreach (char c in input)
