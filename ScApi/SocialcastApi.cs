@@ -97,6 +97,26 @@ namespace ScApi
             return Execute<List<Stream>>(request);
         }
 
+        /// <summary>
+        ///     Gets a list of all groups the user is subscribed to.
+        /// </summary>
+        /// <returns></returns>
+        public List<Group> GetGroups()
+        {
+            var request = new RestRequest("api/group_memberships.json") {RootElement = "group_memberships"};
+            return Execute<List<Group>>(request);
+        }
+
+        /// <summary>
+        ///     Gets a list of all groups available in the community.
+        /// </summary>
+        /// <returns></returns>
+        public List<Group> GetAllGroups()
+        {
+            var request = new RestRequest("api/groups.json") { RootElement = "groups" };
+            return Execute<List<Group>>(request);
+        }
+
         #endregion
 
         #region Internal helpers
