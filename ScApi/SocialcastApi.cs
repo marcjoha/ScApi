@@ -14,6 +14,8 @@ namespace ScApi
         private readonly string _email;
         private readonly SecureString _password;
 
+        #region Constructors
+
         /// <summary>
         ///     Initializes the Socialcast proxy object by securely storing the credentials.
         /// </summary>
@@ -37,6 +39,10 @@ namespace ScApi
             : this(communityUrl, email, ToSecureString(password))
         {
         }
+
+        #endregion
+
+        #region Public methods
 
         /// <summary>
         ///     A user can be a member of several communities. This method returns the one particular community that matches the community against which the service call was made.
@@ -90,6 +96,10 @@ namespace ScApi
             var request = new RestRequest("api/streams.json") {RootElement = "streams"};
             return Execute<List<Stream>>(request);
         }
+
+        #endregion
+
+        #region Internal helpers
 
         /// <summary>
         ///     Executes an arbitrary request.
@@ -148,5 +158,8 @@ namespace ScApi
             }
             return returnValue;
         }
+
+        #endregion
+
     }
 }
