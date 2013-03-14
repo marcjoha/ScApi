@@ -13,6 +13,7 @@ namespace ScApi.Data
         public string Groupname { get; set; }
         public bool Private { get; set; }
         public List<int> AdminIds { get; set; }
+        public string Description { get; set; }
         public string State { get; set; }
         public string Permission { get; set; }
         public string GroupType { get; set; }
