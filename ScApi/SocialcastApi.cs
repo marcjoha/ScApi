@@ -154,7 +154,7 @@ namespace ScApi
         }
 
         /// <summary>
-        ///     If this proxy object was initialized referencing a plain text password, this class stores the password securely
+        ///     If this proxy object was initialized referencing a plain text password, this class stores the password securely.
         /// </summary>
         /// <param name="input">A string that needs to be stored securely</param>
         /// <returns>A SecureString</returns>
