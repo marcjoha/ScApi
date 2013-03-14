@@ -113,7 +113,7 @@ namespace ScApi
         /// <returns></returns>
         public List<Group> GetAllGroups()
         {
-            var request = new RestRequest("api/groups.json") { RootElement = "groups" };
+            var request = new RestRequest("api/groups.json") {RootElement = "groups"};
             return Execute<List<Group>>(request);
         }
 
@@ -180,6 +180,5 @@ namespace ScApi
         }
 
         #endregion
-
     }
 }
