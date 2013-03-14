@@ -54,6 +54,7 @@
     <Compile Include="Data\CustomField.cs" />
     <Compile Include="Data\ExternalResource.cs" />
     <Compile Include="Data\Group.cs" />
+    <Compile Include="Data\GroupMemberships.cs" />
     <Compile Include="Data\Like.cs" />
     <Compile Include="Data\MediaFile.cs" />
     <Compile Include="Data\Message.cs" />

@@ -111,10 +111,10 @@ namespace ScApi
         ///     Gets a list of all groups the user is subscribed to.
         /// </summary>
         /// <returns></returns>
-        public List<Group> GetGroups()
+        public List<GroupMemberships> GetGroups()
         {
             var request = new RestRequest("api/group_memberships.json") {RootElement = "group_memberships"};
-            return Execute<List<Group>>(request);
+            return Execute<List<GroupMemberships>>(request);
         }
 
         /// <summary>
