@@ -89,11 +89,17 @@ namespace ScApi
         ///     Gets all messages in a particular stream a user subscribes to.
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="resultsPerPage"></param>
+        /// <param name="pageNumber"></param>
         /// <returns></returns>
-        public List<Message> GetStream(int id)
+        public List<Message> GetStream(int id, int resultsPerPage = 20, int pageNumber = 1)
         {
             var request = new RestRequest("api/streams/{id}/messages.json") {RootElement = "messages"};
             request.AddUrlSegment("id", id.ToString());
+
+            request.AddParameter("per_page", resultsPerPage);
+            request.AddParameter("page", pageNumber);
+            
             return Execute<List<Message>>(request);
         }
 
